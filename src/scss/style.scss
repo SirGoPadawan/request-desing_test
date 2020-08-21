@@ -1,0 +1,283 @@
+@import "./normalize.css";
+@import "../fonts/fonts.css";
+
+body {
+  font-family: "MyriadProRegular";
+  font-size: 16px;
+  line-height: 1.2;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+@mixin before {
+  content: "";
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+@mixin default {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.header {
+  &-top {
+    position: fixed;
+    top: 0;
+    background-color: #00aa4b;
+    width: 100%;
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1920px;
+      padding: 0;
+      margin: 0 auto;
+
+      & ul:first-child {
+        border-right: none;
+        border-left: none;
+        padding-left: 0;
+      }
+      & ul {
+        flex-grow: 1;
+        padding: 0 30px;
+        border-right: 1px solid #67be7e;
+        border-left: 1px solid #67be7e;
+      }
+      & ul:last-child {
+        border-right: none;
+        border-left: none;
+        padding-right: 0;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: #e9f5ec;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 27px;
+      position: relative;
+    }
+  }
+}
+
+.v-email-header {
+  width: 145px;
+  &__btn-copy {
+    display: none;
+
+    &_active {
+      @include default();
+      display: block;
+      background-color: rgb(35, 35, 35);
+      box-shadow: 0px 7px 24px 0px rgba(0, 0, 0, 0.49);
+      padding: 20px 29px;
+      position: absolute;
+      top: 61px;
+      color: #ffffff;
+      border-radius: 50px;
+    }
+  }
+}
+
+.v-email-header,
+.v-modal-header {
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  &__btn {
+    @include default();
+    opacity: 0.9;
+    color: #ffffff;
+  }
+}
+.v-modal-header {
+  width: 138px;
+  position: relative;
+  &_active {
+    width: 100%;
+    height: 100%;
+    top: 59px;
+    position: fixed;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.502;
+    z-index: 1;
+  }
+  &__feedback {
+    &_active {
+      display: flex;
+      justify-content: space-around;
+      z-index: 2;
+      top: 59px;
+      background: #ffffff;
+      position: absolute;
+      width: 900px;
+      padding: 50px 0;
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    @include default();
+    &::before {
+      @include before();
+      background-image: url(../static/close.svg);
+    }
+  }
+  &__call-phone {
+    color: #67be7e;
+  }
+  &__text {
+    margin: 0;
+    color: #c4c4c4;
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  &__inputs label:last-child {
+    margin-bottom: 0;
+  }
+  &__radio {
+    display: none;
+  }
+  &__telephone-handler,
+  &__viber,
+  &__telegram,
+  &__whatsapp {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: max-content;
+    border-bottom: 1px solid transparent;
+    margin-left: 34px;
+    margin-bottom: 24px;
+    &:hover {
+      border-bottom: 1px solid rgb(186, 186, 186);
+    }
+  }
+  &__telephone-handler {
+    &::before {
+      @include before();
+      background-image: url(../static/telephone-handle.png);
+      right: 106px;
+    }
+  }
+  &__viber {
+    &::before {
+      @include before();
+      background-image: url(../static/viber.png);
+      right: 48px;
+    }
+  }
+  &__telegram {
+    &::before {
+      @include before();
+      background-image: url(../static/telegram.png);
+      right: 81px;
+    }
+  }
+  &__whatsapp {
+    &::before {
+      @include before();
+      background-image: url(../static/whatsapp.png);
+      right: 88px;
+    }
+  }
+  &__radio:checked + .checked {
+    border-bottom: 1px solid rgb(186, 186, 186);
+  }
+  &__feedback-title,
+  &__call-phone {
+    font-size: 1.7rem;
+  }
+  &__input {
+    @include default();
+    padding: 4px 0 4px 10px;
+    border-bottom: 1px solid rgb(186, 186, 186);
+    &:focus {
+      border-color: rgb(255, 157, 12);
+    }
+  }
+  &__label {
+    margin-top: 16px;
+  }
+  &__send-btn {
+    @include default();
+    background: rgb(255, 157, 12);
+    color: #fff;
+    border-radius: 50px;
+    padding: 14px 30px;
+    margin-top: 30px;
+  }
+}
+.btn {
+  &-email {
+    position: relative;
+    &::before {
+      @include before();
+      background-image: url(../static/email.png);
+      top: 3px;
+      right: 115px;
+    }
+  }
+  &-telephone {
+    position: relative;
+    &::before {
+      @include before();
+      background-image: url(../static/telephone.png);
+      right: 105px;
+    }
+  }
+}
+.main {
+  background: #f4f2f2;
+  margin-top: 60px;
+  width: 100vw;
+  height: 100vh;
+}
+.brands {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #fff;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 15px 0;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px 70px;
+    border-right: 1px solid rgb(232, 231, 231);
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

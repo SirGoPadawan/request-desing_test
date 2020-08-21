@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "MyriadProBold"; /* TODO: Это все шрифты с 1 названием MyriadPro, но с разыми font-wheight и font-style, а не наоборот. когда вызываешь их, то меняешь просто толщену или наклон шрифта текущего, а не название шрифта */
+  src: url("./MyriadProBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MyriadProBoldItalic";
+  src: url("./MyriadProBoldItalic.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MyriadProItalic";
+  src: url("./MyriadProItalic.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("./MyriadProRegular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MyriadProSemiBold";
+  src: url("./MyriadProSemiBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MyriadProSemiBoldItalic";
+  src: url("./MyriadProSemiBoldItalic.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MyriadProLight";
+  src: url("./MyriadProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
