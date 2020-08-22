@@ -30,7 +30,7 @@ li {
     position: fixed;
     top: 0;
     background-color: #00aa4b;
-    width: 100%;
+    width: 100vw;
 
     &__nav {
       display: flex;
@@ -170,7 +170,7 @@ li {
   &__whatsapp {
     position: relative;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     width: max-content;
     border-bottom: 1px solid transparent;
     margin-left: 34px;
@@ -212,7 +212,7 @@ li {
   }
   &__feedback-title,
   &__call-phone {
-    font-size: 1.7rem;
+    font-size: 1.7em;
   }
   &__input {
     @include default();
@@ -274,10 +274,119 @@ li {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    padding: 20px 70px;
+    padding: 20px 0;
     border-right: 1px solid rgb(232, 231, 231);
     &:last-child {
       border-right: none;
     }
+    &:last-child > a {
+      font-size: 1.125em;
+      color: #000000;
+    }
+  }
+}
+.news {
+  font-family: "MyriadProLight";
+  max-width: 1790px;
+  padding-right: 65px;
+  padding-left: 65px;
+  margin: 0 auto;
+  margin-top: 170px;
+  font-size: 1em;
+  &__title {
+    font-size: 2.5em;
+    line-height: 1.2;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    height: 580px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    width: 65%;
+    flex-grow: 1;
+    max-height: 160px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30%;
+      max-height: inherit;
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+      & .news__img-box {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        margin-right: 0;
+        & .news__img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+      & .news__brand-date,
+      & .news__item-title,
+      & .news__text {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  &__img-box {
+    width: 20%;
+    height: 100%;
+    position: relative;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+  &__brand-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+  }
+  &__brand {
+    color: #67be7e;
+    margin-top: 0;
+  }
+  &__date {
+    color: #c4c4c4;
+    margin-top: 0;
+  }
+  &__item-title {
+    margin-top: 0;
+    font-size: 1.5em;
+    overflow: hidden;
+    width: 70%;
+  }
+  &__text {
+    overflow: hidden;
+    margin: 0;
+    width: 70%;
+  }
+  &__button {
+    @include default();
+    color: #000000;
+    margin-top: 55px;
+    border: 2px solid #000000;
+    padding: 7px 40px;
+    border-radius: 50px;
   }
 }
