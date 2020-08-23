@@ -31,6 +31,7 @@ li {
     top: 0;
     background-color: #00aa4b;
     width: 100vw;
+    z-index: 100;
 
     &__nav {
       display: flex;
@@ -257,7 +258,6 @@ li {
   background: #f4f2f2;
   margin-top: 60px;
   width: 100vw;
-  height: 100vh;
 }
 .brands {
   max-width: 1920px;
@@ -286,17 +286,9 @@ li {
   }
 }
 .news {
-  font-family: "MyriadProLight";
   max-width: 1790px;
   padding-right: 65px;
   padding-left: 65px;
-  margin: 0 auto;
-  margin-top: 170px;
-  font-size: 1em;
-  &__title {
-    font-size: 2.5em;
-    line-height: 1.2;
-  }
   &__list {
     display: flex;
     flex-direction: column;
@@ -388,5 +380,316 @@ li {
     border: 2px solid #000000;
     padding: 7px 40px;
     border-radius: 50px;
+  }
+}
+.news,
+.recommend,
+.ceo {
+  font-family: "MyriadProLight";
+  margin: 0 auto;
+  margin-top: 170px;
+  font-size: 1em;
+  &__title {
+    font-size: 2.5em;
+    line-height: 1.2;
+  }
+}
+.ceo,
+.recommend {
+  max-width: 1766px;
+  padding-right: 77px;
+  padding-left: 77px;
+}
+.recommend {
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__title,
+  &__text {
+    text-align: center;
+  }
+  &__text {
+    color: #787878;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: 30%;
+  }
+  &__equipment {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      height: 800px;
+    }
+    &_left {
+      text-align: center;
+      overflow: hidden;
+      background: #ffffff;
+      padding: 60px 90px;
+      width: 29%;
+      position: relative;
+    }
+    &-brand,
+    &-abat__brand,
+    &-hicold__brand {
+      font-size: 1.5em;
+      margin: 0;
+    }
+    &-text,
+    &-abat__text,
+    &-hicold__text {
+      width: 50%;
+      color: #787878;
+      margin-bottom: 20px;
+    }
+    &-text {
+      margin: 0 auto;
+    }
+    &-title,
+    &-abat__title,
+    &-hicold__title {
+      font-size: 2em;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    &-box-img {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    &_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60%;
+    }
+    &-abat {
+      position: relative;
+      overflow: hidden;
+      background: #232323;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      &__title,
+      &__text,
+      &__brand {
+        width: 50%;
+        margin: 0 auto;
+        color: #ffffff;
+      }
+      &__title {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      &__text {
+        color: #787878;
+      }
+      &__img-box {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        margin: 0;
+        right: 78%;
+      }
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+      }
+    }
+    &-hicold {
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+      height: 38%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      &__img-box {
+        width: 36%;
+        height: 100%;
+        position: absolute;
+        left: 71%;
+        top: 7px;
+      }
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+}
+.ceo {
+  padding-bottom: 170px;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__offer {
+    width: 60%;
+    &-title {
+      font-size: 2.5em;
+      line-height: 1.2;
+    }
+    &-subtitle {
+      font-size: 2.5em;
+      font-weight: 100;
+      margin: 20px 0;
+    }
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    &-box-img {
+      width: 150px;
+      height: 150px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+    &-img {
+      width: 100%;
+    }
+    &-main-link {
+      color: #000000;
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+    &-text {
+      margin: 0;
+      color: #787878;
+    }
+    &-group {
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    &-mark {
+      color: #787878;
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    margin-top: 40px;
+    @include default();
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    &::before {
+      @include before();
+      background-image: url(../static/plus.svg);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.nav-footer {
+  width: 100vw;
+  background: #232323;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  &__list {
+    max-width: 1766px;
+    padding-right: 77px;
+    padding-left: 77px;
+    font-family: "MyriadProLight";
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: #6d6d6d;
+    font-size: 1.5em;
+  }
+  &__sublist {
+    padding: 0;
+    margin-top: 35px;
+    & li {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      & a {
+        color: #ffffff;
+      }
+    }
+  }
+  &__text {
+    margin: 0;
+    color: #fff;
+    margin-bottom: 25px;
+  }
+  &__work-time {
+    margin-bottom: 25px;
+    & p {
+      color: #fff;
+      margin: 0;
+    }
+  }
+  &__address {
+    margin-top: 25px;
+    & a p {
+      margin: 0;
+    }
+  }
+}
+.address-footer {
+  width: 100vw;
+  background: #191919;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__items {
+    max-width: 1766px;
+    padding-right: 77px;
+    padding-left: 77px;
+    font-family: "MyriadProLight";
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+  }
+  &__item {
+    &_left {
+      display: flex;
+      align-items: center;
+    }
+    &_right {
+      display: flex;
+      align-items: baseline;
+      & a {
+        color: #ffffff;
+        font-size: 1.1em;
+      }
+    }
+  }
+  &__box-logo {
+    width: 40px;
+    height: 40px;
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
+  }
+  &__link-main {
+    margin-left: 15px;
+
+    & a {
+      color: #ffffff;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    & p {
+      margin: 0;
+      color: #787878;
+    }
   }
 }
