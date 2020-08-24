@@ -27,9 +27,12 @@ li {
 }
 .header {
   &-top {
-    position: fixed;
-    top: 0;
     background-color: #00aa4b;
+    top: 0;
+  }
+  &-top,
+  &-middle {
+    position: fixed;
     width: 100vw;
     z-index: 100;
 
@@ -72,6 +75,89 @@ li {
       align-items: center;
       height: 27px;
       position: relative;
+    }
+  }
+  &-middle {
+    top: 59px;
+    background: #e7e6e6;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1920px;
+      padding: 0;
+      margin: 0 auto;
+      padding: 16px 0;
+    }
+    &__logo-box {
+      display: flex;
+      align-items: center;
+    }
+    &__logo-box,
+    &__providers-logo-box {
+      width: 40px;
+      height: 40px;
+    }
+    &__logo,
+    &__providers-logo {
+      width: 100%;
+      height: 100%;
+    }
+    &__link-main {
+      margin-left: 10px;
+      color: #000000;
+      font-size: 2.4em;
+    }
+    &__providers {
+      display: flex;
+      align-items: center;
+      filter: grayscale(100%);
+      &:hover {
+        filter: none;
+      }
+      &-span {
+        width: 110px;
+        color: #787878;
+        margin-left: 8px;
+      }
+    }
+    &__cart-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 60px;
+      background: transparent;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: rgb(255, 157, 12);
+        & span {
+          color: #ffffff;
+          & img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+    &__cart,
+    &__cart-summ {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__cart-summ {
+      margin-left: 8px;
+    }
+    &__amount {
+      color: rgb(255, 157, 12);
+    }
+    &__summ {
+      &-text {
+        color: #787878;
+      }
+      &-amount {
+        color: #000000;
+      }
     }
   }
 }
@@ -252,6 +338,37 @@ li {
       background-image: url(../static/telephone.png);
       right: 105px;
     }
+  }
+}
+.search {
+  display: flex;
+  &__select {
+    &__input {
+      @include default();
+      background: #f1f1f1;
+      height: 100%;
+      padding: 0;
+      border-radius: 10px 0 0 10px;
+      padding-left: 15px;
+    }
+  }
+  &__input {
+    @include default();
+    background: #ffffff;
+    padding: 8px 0 8px 15px;
+    height: 100%;
+  }
+  &__button {
+    @include default();
+    width: 45px;
+    height: 35px;
+    background: #ff9d0c;
+    padding: 4px 0;
+    border-radius: 0 10px 10px 0;
+  }
+  &__img {
+    height: 100%;
+    filter: brightness(0) invert(1);
   }
 }
 .main {
