@@ -2,12 +2,15 @@
   <nav class="header-middle">
     <ul class="header-middle__list">
       <li>
-        <router-link to="#" class="header-middle__logo-box">
-          <img
-            src="../img/logo.png"
-            alt="Логотип"
-            class="header-middle__logo"
-          /><span class="header-middle__link-main">Столовая.РУ</span>
+        <router-link to="#" class="header-middle__link-home">
+          <div class="header-middle__logo-box">
+            <img
+              src="../img/logo.png"
+              alt="Логотип"
+              class="header-middle__logo"
+            />
+          </div>
+          <span class="header-middle__link-main">Столовая.РУ</span>
         </router-link>
       </li>
       <li>

@@ -36,6 +36,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "es6-promise": "^4.2.8"
+    "es6-promise": "^4.2.8",
+    "swiper": "^6.1.2",
+    "vue-awesome-swiper": "^4.1.1"
   }
 }

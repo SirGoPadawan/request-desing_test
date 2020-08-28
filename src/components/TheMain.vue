@@ -1,5 +1,6 @@
 <template>
   <main class="main">
+    <v-offers />
     <v-brands />
     <v-news />
     <v-recommend />
@@ -9,6 +10,7 @@
 <script>
 export default {
   components: {
+    "v-offers": () => import("./VOffers"),
     "v-brands": () => import("./VBrands"),
     "v-news": () => import("./VNews"),
     "v-recommend": () => import("./VRecommend"),
@@ -16,4 +18,3 @@ export default {
   },
 };
 </script>
-
