@@ -1,6 +1,5 @@
 @import "./normalize.css";
 @import "../fonts/fonts.css";
-@import "./news.scss";
 
 body {
   font-family: "MyriadProRegular";
@@ -501,7 +500,7 @@ ul {
       max-width: 1920px;
       margin: 0 auto;
       align-items: center;
-      padding: 32px 10px 20px 10px;
+      padding: 32px 25px 20px 25px;
     }
     &__item {
       display: flex;
@@ -645,6 +644,7 @@ ul {
     background: #ffffff;
     padding-top: 30px;
     padding-bottom: 20px;
+    margin-right: 20px;
     &__title {
       color: #faad3d;
       padding: 0 30px;
@@ -689,6 +689,7 @@ ul {
     align-items: baseline;
     padding: 0 20px 50px 20px;
     width: 13%;
+    margin-left: 20px;
     &__present {
       margin-bottom: 25px;
     }
@@ -706,6 +707,92 @@ ul {
     }
   }
 }
+
+.news {
+  max-width: 1790px;
+  padding-right: 65px;
+  padding-left: 65px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &_left {
+      height: 580px;
+      width: 30%;
+    }
+    &_right {
+      height: 580px;
+      width: 65%;
+      & .news__item .news__img {
+        max-height: 200px;
+        margin-right: 30px;
+      }
+    }
+  }
+  &__img {
+    object-fit: cover;
+  }
+  &__published {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    margin-top: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__brand-date,
+  &__item-title,
+  &__text {
+    margin: 0;
+  }
+  &__brand {
+    color: #67be7e;
+    margin-top: 0;
+  }
+  &__date {
+    color: #c4c4c4;
+    margin-top: 0;
+  }
+  &__item-title {
+    margin-top: 0;
+    font-size: 1.5em;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  &__text {
+    overflow: hidden;
+    margin: 0;
+  }
+  &__button {
+    @include default();
+    color: #000000;
+    margin-top: 55px;
+    border: 2px solid #000000;
+    padding: 7px 40px;
+    border-radius: 50px;
+  }
+}
+.news,
+.recommend,
+.ceo {
+  font-family: "MyriadProLight";
+  margin: 0 auto;
+  margin-top: 170px;
+  font-size: 1em;
+  &__title {
+    font-size: 2.5em;
+    line-height: 1.2;
+  }
+}
+
 .brands {
   max-width: 1920px;
   margin: 0 auto;

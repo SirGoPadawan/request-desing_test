@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <!-- <v-header-top />
+    <v-header-top />
     <v-header-middle />
-    <v-header-bottom /> -->
+    <v-header-bottom />
   </header>
 </template>
 <script>
