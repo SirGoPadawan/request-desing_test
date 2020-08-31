@@ -1,0 +1,105 @@
+@mixin default {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.news {
+  max-width: 1790px;
+  padding-right: 65px;
+  padding-left: 65px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    height: 580px;
+  }
+  &__img {
+    width: 250px;
+    object-fit: cover;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 65%;
+    height: 170px;
+  }
+  &__brand-date,
+  &__item-title,
+  &__text {
+    margin: 0;
+    width: 70%;
+  }
+  &__brand-date {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__brand {
+    color: #67be7e;
+    margin-top: 0;
+  }
+  &__date {
+    color: #c4c4c4;
+    margin-top: 0;
+  }
+  &__item-title {
+    margin-top: 0;
+    font-size: 1.5em;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  &__text {
+    overflow: hidden;
+    margin: 0;
+  }
+  &__button {
+    @include default();
+    color: #000000;
+    margin-top: 55px;
+    border: 2px solid #000000;
+    padding: 7px 40px;
+    border-radius: 50px;
+  }
+  &__item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30%;
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+      height: inherit;
+      & .news__img {
+        width: auto;
+        object-fit: cover;
+      }
+      & .news__item-title {
+        margin-bottom: 0;
+      }
+      & .news__brand-date,
+      & .news__item-title,
+      & .news__text {
+        width: auto;
+      }
+    }
+  }
+}
+.news,
+.recommend,
+.ceo {
+  font-family: "MyriadProLight";
+  margin: 0 auto;
+  /*  margin-top: 170px; */
+  font-size: 1em;
+  &__title {
+    font-size: 2.5em;
+    line-height: 1.2;
+  }
+}

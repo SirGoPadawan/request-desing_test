@@ -1,5 +1,6 @@
 @import "./normalize.css";
 @import "../fonts/fonts.css";
+@import "./news.scss";
 
 body {
   font-family: "MyriadProRegular";
@@ -352,7 +353,7 @@ ul {
       display: flex;
       justify-content: space-between;
       max-width: 1920px;
-      padding: 0;
+      padding: 0 10px;
       margin: 0 auto;
 
       & ul:first-child {
@@ -396,7 +397,7 @@ ul {
       display: flex;
       justify-content: space-between;
       max-width: 1920px;
-      padding: 0;
+      padding: 0 10px;
       margin: 0 auto;
       align-items: center;
       & > li:first-child {
@@ -500,12 +501,13 @@ ul {
       max-width: 1920px;
       margin: 0 auto;
       align-items: center;
-      padding: 32px 0 20px 0;
+      padding: 32px 10px 20px 10px;
     }
     &__item {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
     &__box-img {
       position: relative;
@@ -633,6 +635,7 @@ ul {
 }
 .offers {
   max-width: 1920px;
+  height: 460px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -729,115 +732,7 @@ ul {
     }
   }
 }
-.news {
-  max-width: 1790px;
-  padding-right: 65px;
-  padding-left: 65px;
-  &__list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
-    height: 580px;
-  }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-evenly;
-    flex-wrap: wrap;
-    width: 65%;
-    flex-grow: 1;
-    max-height: 160px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &:first-child {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30%;
-      max-height: inherit;
-      margin-bottom: 0;
-      flex-wrap: nowrap;
-      & .news__img-box {
-        width: 100%;
-        height: 300px;
-        position: relative;
-        margin-right: 0;
-        & .news__img {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          object-fit: cover;
-        }
-      }
-      & .news__brand-date,
-      & .news__item-title,
-      & .news__text {
-        width: 100%;
-        margin: 0;
-      }
-    }
-  }
-  &__img-box {
-    width: 20%;
-    height: 100%;
-    position: relative;
-  }
-  &__img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-  }
-  &__brand-date {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-  }
-  &__brand {
-    color: #67be7e;
-    margin-top: 0;
-  }
-  &__date {
-    color: #c4c4c4;
-    margin-top: 0;
-  }
-  &__item-title {
-    margin-top: 0;
-    font-size: 1.5em;
-    overflow: hidden;
-    width: 70%;
-  }
-  &__text {
-    overflow: hidden;
-    margin: 0;
-    width: 70%;
-  }
-  &__button {
-    @include default();
-    color: #000000;
-    margin-top: 55px;
-    border: 2px solid #000000;
-    padding: 7px 40px;
-    border-radius: 50px;
-  }
-}
-.news,
-.recommend,
-.ceo {
-  font-family: "MyriadProLight";
-  margin: 0 auto;
-  margin-top: 170px;
-  font-size: 1em;
-  &__title {
-    font-size: 2.5em;
-    line-height: 1.2;
-  }
-}
+
 .ceo,
 .recommend {
   max-width: 1766px;

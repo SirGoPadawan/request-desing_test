@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
-    <v-nav-footer />
-    <v-address-footer />
+    <!--  <v-nav-footer />
+    <v-address-footer /> -->
   </footer>
 </template>
 <script>

@@ -38,13 +38,13 @@ module.exports = {
               sourceMap: true,
             },
           },
-          {
+          /* {
             loader: "postcss-loader",
             options: {
               plugins: [autoprefixer()],
               sourceMap: true,
             },
-          },
+          }, */
           {
             loader: "sass-loader",
             options: {
