@@ -1,10 +1,12 @@
 <template>
   <main class="main">
-    <v-offers />
-    <v-brands />
-    <v-news />
-    <v-recommend />
-    <v-ceo />
+    <section class="container-main">
+      <v-offers />
+      <v-brands />
+      <v-news />
+      <v-recommend />
+      <v-ceo />
+    </section>
   </main>
 </template>
 <script>

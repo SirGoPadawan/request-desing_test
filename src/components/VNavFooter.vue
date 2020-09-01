@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-footer">
-    <ul class="nav-footer__list">
+    <ul class="nav-footer__list container-footer">
       <li>
         <router-link to="#" class="nav-footer__title">Информация</router-link>
         <ul class="nav-footer__sublist">

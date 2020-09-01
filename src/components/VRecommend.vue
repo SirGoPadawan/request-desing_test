@@ -14,23 +14,15 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa nemo
           non esse distinctio harum ad.
         </p>
-        <div class="recommend__equipment-box-img">
-          <img
-            src="../img/steamcon.png"
-            alt="пароконвектомат"
-            class="recommend__equipment-img"
-          />
-        </div>
+
+        <img
+          src="../img/steamcon.png"
+          alt="пароконвектомат"
+          class="recommend__equipment-left__img"
+        />
       </div>
       <div class="recommend__equipment_right">
         <div class="recommend__equipment-abat">
-          <div class="recommend__equipment-abat__img-box">
-            <img
-              src="../img/furnace.png"
-              alt="пароконвектомат"
-              class="recommend__equipment-abat__img"
-            />
-          </div>
           <div>
             <p class="recommend__equipment-abat__brand">ABAT</p>
             <h3 class="recommend__equipment-abat__title">
@@ -41,15 +33,14 @@
               nemo non esse distinctio harum ad.
             </p>
           </div>
+
+          <img
+            src="../img/furnace.png"
+            alt="пароконвектомат"
+            class="recommend__equipment-abat__img"
+          />
         </div>
         <div class="recommend__equipment-hicold">
-          <div class="recommend__equipment-hicold__img-box">
-            <img
-              src="../img/refregerator.png"
-              alt="пароконвектомат"
-              class="recommend__equipment-hicold__img"
-            />
-          </div>
           <div>
             <p class="recommend__equipment-hicold__brand">HICOLD</p>
             <h3 class="recommend__equipment-hicold__title">
@@ -60,6 +51,12 @@
               nemo non esse distinctio harum ad.
             </p>
           </div>
+
+          <img
+            src="../img/refregerator.png"
+            alt="пароконвектомат"
+            class="recommend__equipment-hicold__img"
+          />
         </div>
       </div>
     </div>

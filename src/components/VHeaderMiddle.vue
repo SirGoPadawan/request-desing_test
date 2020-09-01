@@ -1,6 +1,6 @@
 <template>
   <nav class="header-middle">
-    <ul class="header-middle__list">
+    <ul class="header-middle__list container-header">
       <li>
         <router-link to="#" class="header-middle__link-home">
           <div class="header-middle__logo-box">

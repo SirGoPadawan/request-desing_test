@@ -156,7 +156,6 @@ ul {
 }
 
 .v-email-header {
-  width: 145px;
   &__btn-copy {
     display: none;
 
@@ -181,7 +180,6 @@ ul {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   &:hover {
     background-color: rgba(255, 255, 255, 0.3);
   }
@@ -192,8 +190,6 @@ ul {
   }
 }
 .v-modal-header {
-  width: 138px;
-  position: relative;
   &_active {
     width: 100%;
     height: 100%;
@@ -214,6 +210,7 @@ ul {
       position: absolute;
       width: 900px;
       padding: 50px 0;
+      right: 0;
     }
   }
 
@@ -225,6 +222,7 @@ ul {
     &::before {
       @include before();
       background-image: url(../static/close.svg);
+      color: #000000;
     }
   }
   &__call-phone {
@@ -239,58 +237,27 @@ ul {
     flex-direction: column;
     margin-bottom: 16px;
   }
-  &__inputs label:last-child {
-    margin-bottom: 0;
-  }
   &__radio {
     display: none;
   }
-  &__telephone-handler,
-  &__viber,
-  &__telegram,
-  &__whatsapp {
-    position: relative;
-    cursor: pointer;
+  &__inputs-span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
     font-size: 1.2em;
-    width: max-content;
+  }
+  &__communication {
+    cursor: pointer;
     border-bottom: 1px solid transparent;
-    margin-left: 34px;
-    margin-bottom: 24px;
-    &:hover {
-      border-bottom: 1px solid rgb(186, 186, 186);
+    width: max-content;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
-  &__telephone-handler {
-    &::before {
-      @include before();
-      background-image: url(../static/telephone-handle.png);
-      right: 106px;
-    }
+  &__comm-logo {
+    margin-right: 10px;
   }
-  &__viber {
-    &::before {
-      @include before();
-      background-image: url(../static/viber.png);
-      right: 48px;
-    }
-  }
-  &__telegram {
-    &::before {
-      @include before();
-      background-image: url(../static/telegram.png);
-      right: 81px;
-    }
-  }
-  &__whatsapp {
-    &::before {
-      @include before();
-      background-image: url(../static/whatsapp.png);
-      right: 88px;
-    }
-  }
-  &__radio:checked + .checked {
-    border-bottom: 1px solid rgb(186, 186, 186);
-  }
+
   &__feedback-title,
   &__call-phone {
     font-size: 1.7em;
@@ -306,6 +273,7 @@ ul {
   &__label {
     margin-top: 16px;
   }
+
   &__send-btn {
     @include default();
     background: rgb(255, 157, 12);
@@ -315,24 +283,20 @@ ul {
     margin-top: 30px;
   }
 }
-.btn {
-  &-email {
-    position: relative;
-    &::before {
-      @include before();
-      background-image: url(../static/email.png);
-      top: 3px;
-      right: 115px;
-    }
+.communication {
+  &:hover {
+    border-bottom: 1px solid rgb(186, 186, 186);
   }
-  &-telephone {
-    position: relative;
-    &::before {
-      @include before();
-      background-image: url(../static/telephone.png);
-      right: 105px;
-    }
-  }
+}
+.v-modal-header__radio:checked + .communication {
+  border-bottom: 1px solid rgb(186, 186, 186);
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1920px;
+  padding: 0 190px;
+  margin: 0 auto;
 }
 
 .header {
@@ -349,12 +313,6 @@ ul {
   &-top {
     z-index: 100;
     &__nav {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1920px;
-      padding: 0 10px;
-      margin: 0 auto;
-
       & ul:first-child {
         border-right: none;
         border-left: none;
@@ -393,11 +351,6 @@ ul {
     background: #e7e6e6;
     z-index: 98;
     &__list {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1920px;
-      padding: 0 10px;
-      margin: 0 auto;
       align-items: center;
       & > li:first-child {
         margin-right: 25px;
@@ -485,22 +438,17 @@ ul {
     }
   }
   &-bottom {
-    top: 108px;
+    top: 119px;
     background: #ffffff;
     z-index: 97;
     font-family: "MyriadProLight";
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
     &__modal {
       z-index: 95;
-      top: 136px;
+      top: 98px;
     }
     &__list {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1920px;
-      margin: 0 auto;
-      align-items: center;
-      padding: 32px 25px 20px 25px;
+      padding: 10px 190px;
     }
     &__item {
       display: flex;
@@ -510,8 +458,8 @@ ul {
     }
     &__box-img {
       position: relative;
-      width: 65px;
-      height: 65px;
+      width: 58px;
+      height: 58px;
       background: #e8e8e8;
       border-radius: 50px;
       overflow: hidden;
@@ -527,7 +475,7 @@ ul {
     &__sub {
       &-list {
         position: absolute;
-        top: 136px;
+        top: 97px;
         background: #ffffff;
         padding: 20px 0 19px 0;
         left: 0;
@@ -630,21 +578,24 @@ ul {
   font-family: "MyriadProLight";
   background: #f4f2f2;
   width: 100vw;
-  margin-top: 245px;
+  margin-top: 200px;
+}
+.container-main {
+  max-width: 1920px;
+  padding: 0 190px;
+  margin: 0 auto;
 }
 .offers {
-  max-width: 1920px;
-  height: 460px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  height: 460px;
+  padding-top: 40px;
   margin-bottom: 20px;
   &-nav {
     background: #ffffff;
     padding-top: 30px;
     padding-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     &__title {
       color: #faad3d;
       padding: 0 30px;
@@ -660,7 +611,7 @@ ul {
       }
       &:after {
         content: ">";
-        bottom: 12px;
+        bottom: 7px;
         right: 15px;
         position: absolute;
       }
@@ -678,7 +629,7 @@ ul {
     }
   }
   &-slider {
-    width: 64%;
+    width: 60%;
   }
   &-sale {
     background: #ffffff;
@@ -689,7 +640,7 @@ ul {
     align-items: baseline;
     padding: 0 20px 50px 20px;
     width: 13%;
-    margin-left: 20px;
+    margin-left: 10px;
     &__present {
       margin-bottom: 25px;
     }
@@ -707,12 +658,48 @@ ul {
     }
   }
 }
-
+.brands {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 15px 0;
+    background: #fff;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px 20px;
+    border-right: 1px solid rgb(232, 231, 231);
+    &:last-child {
+      border-right: none;
+      padding: 0 30px;
+    }
+    &:last-child > a {
+      font-size: 1.125em;
+      color: #000000;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__logo {
+    width: 100%;
+  }
+}
 .news {
-  max-width: 1790px;
+  padding: 0 65px;
+  margin-top: 170px;
+  font-size: 1em;
+  &__title {
+    font-size: 2.5em;
+  }
   padding-right: 65px;
   padding-left: 65px;
-
   &__list {
     display: flex;
     justify-content: space-between;
@@ -780,55 +767,13 @@ ul {
     border-radius: 50px;
   }
 }
-.news,
-.recommend,
-.ceo {
-  font-family: "MyriadProLight";
-  margin: 0 auto;
+.recommend {
+  padding: 0 77px;
   margin-top: 170px;
   font-size: 1em;
   &__title {
-    font-size: 2.5em;
-    line-height: 1.2;
-  }
-}
-
-.brands {
-  max-width: 1920px;
-  margin: 0 auto;
-  background: #fff;
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 15px 0;
-  }
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    padding: 20px 0;
-    border-right: 1px solid rgb(232, 231, 231);
-    &:last-child {
-      border-right: none;
-    }
-    &:last-child > a {
-      font-size: 1.125em;
-      color: #000000;
-    }
-  }
-}
-
-.ceo,
-.recommend {
-  max-width: 1766px;
-  padding-right: 77px;
-  padding-left: 77px;
-}
-.recommend {
-  &__title {
     margin-bottom: 15px;
+    font-size: 2.5em;
   }
   &__title,
   &__text {
@@ -837,7 +782,7 @@ ul {
   &__text {
     color: #787878;
     margin: 0 auto;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     width: 30%;
   }
   &__equipment {
@@ -850,9 +795,13 @@ ul {
       text-align: center;
       overflow: hidden;
       background: #ffffff;
-      padding: 60px 90px;
-      width: 29%;
+      padding: 60px 45px;
+      width: 30%;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 15px;
     }
     &-brand,
     &-abat__brand,
@@ -877,16 +826,15 @@ ul {
       margin-top: 15px;
       margin-bottom: 15px;
     }
-    &-box-img {
-      position: absolute;
-      left: 0;
-      right: 0;
+    &-left__img {
+      width: 300px;
+      height: 100%;
     }
     &_right {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 60%;
+      width: 65%;
     }
     &-abat {
       position: relative;
@@ -894,10 +842,9 @@ ul {
       background: #232323;
       height: 60%;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
+      padding-left: 160px;
+
       &__title,
       &__text,
       &__brand {
@@ -920,10 +867,12 @@ ul {
         right: 78%;
       }
       &__img {
-        width: 100%;
-        height: 100%;
+        width: 260px;
+        height: 470px;
         object-fit: cover;
         object-position: right;
+        position: absolute;
+        left: 0;
       }
     }
     &-hicold {
@@ -932,27 +881,24 @@ ul {
       background: #ffffff;
       height: 38%;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      &__img-box {
-        width: 36%;
-        height: 100%;
-        position: absolute;
-        left: 71%;
-        top: 7px;
-      }
+      justify-content: space-between;
+
+      padding-left: 50px;
       &__img {
-        width: 100%;
+        width: 300px;
         height: 100%;
-        object-fit: cover;
-        object-position: top;
       }
     }
   }
 }
 .ceo {
+  padding: 0 77px;
+  margin-top: 170px;
+  font-size: 1em;
+  &__title {
+    font-size: 2.5em;
+  }
   padding-bottom: 170px;
   &__items {
     display: flex;
@@ -1018,17 +964,19 @@ ul {
     }
   }
 }
+.container-footer {
+  font-family: "MyriadProLight";
+  max-width: 1920px;
+  padding: 0 267px;
+  margin: 0 auto;
+}
+
 .nav-footer {
   width: 100vw;
   background: #232323;
   padding-top: 90px;
   padding-bottom: 50px;
   &__list {
-    max-width: 1766px;
-    padding-right: 77px;
-    padding-left: 77px;
-    font-family: "MyriadProLight";
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
@@ -1074,11 +1022,6 @@ ul {
   padding-top: 40px;
   padding-bottom: 40px;
   &__items {
-    max-width: 1766px;
-    padding-right: 77px;
-    padding-left: 77px;
-    font-family: "MyriadProLight";
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     font-style: normal;
@@ -1116,6 +1059,376 @@ ul {
     & p {
       margin: 0;
       color: #787878;
+    }
+  }
+}
+
+@media screen and (max-width: 1740px) {
+  .offers {
+    &-nav__title {
+      font-size: 1.4em;
+    }
+    &-sale__title {
+      font-size: 1.8em;
+    }
+  }
+  .swiper .swiper-slide__title {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 1650px) {
+  body {
+    font-size: 12px;
+  }
+  .offers {
+    height: 380px;
+    &-slider {
+      width: 63%;
+    }
+  }
+  .swiper .swiper-slide__img {
+    width: 285px;
+    height: 270px;
+  }
+  .header {
+    &-middle {
+      top: 50px;
+    }
+    &-bottom {
+      top: 109px;
+      &__modal {
+        top: 92px;
+      }
+      &__sub-list {
+        top: 91px;
+      }
+      &__sub-item-all__img {
+        width: 230px;
+      }
+    }
+  }
+  .v-modal-header {
+    &_active {
+      top: 51px;
+    }
+    &__feedback_active {
+      top: 55px;
+      width: 520px;
+    }
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  .offers-nav__link {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .offers-nav__link {
+    font-size: 0.8em;
+  }
+  .recommend__equipment {
+    &-list {
+      height: 550px;
+    }
+    &-abat__img {
+      width: 180px;
+      height: 315px;
+    }
+    &-hicold__img {
+      width: 230px;
+    }
+    &__img {
+      width: 220px;
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .header-bottom {
+    &__modal {
+      top: 80px;
+    }
+    &__sub-list {
+      top: 79px;
+    }
+    &__box-img {
+      width: 46px;
+      height: 46px;
+    }
+    &__sub-list_left {
+      left: 234px;
+    }
+  }
+  .header-bottom__sub-item {
+    width: 235px;
+  }
+  .header-bottom__sub-item {
+    &-prod,
+    &-brands,
+    &-country {
+      width: 100px;
+    }
+    &-all {
+      padding: 28px 28px;
+    }
+  }
+  .header-top {
+    &__nav ul {
+      padding: 0 10px;
+    }
+    &__link {
+      font-size: 0.8em;
+    }
+  }
+  .v-email-header__btn,
+  .v-modal-header__btn {
+    font-size: 0.8em;
+  }
+  .header-middle__link-main {
+    font-size: 1.7em;
+  }
+  .recommend__equipment {
+    &-list {
+      height: 450px;
+    }
+    &-title,
+    &-abat__title,
+    &-hicold__title {
+      font-size: 1.5em;
+    }
+    &-brand,
+    &-abat__brand,
+    &-hicold__brand {
+      font-size: 1.3em;
+    }
+    &-text,
+    &-abat__text,
+    &-hicold__text {
+      font-size: 0.8em;
+    }
+    &-left__img {
+      width: 220px;
+    }
+    &_left {
+      padding: 30px 45px;
+    }
+    &-hicold__img {
+      width: 180px;
+    }
+  }
+  .swiper .swiper-slide__img {
+    width: 170px;
+    height: 230px;
+  }
+  .offers {
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  .main {
+    margin-top: 190px;
+  }
+}
+@media screen and (max-width: 1210px) {
+  .main {
+    margin-top: 175px;
+  }
+  .v-modal-header {
+    &__label {
+      font-size: 0.7em;
+    }
+    &__btn-close::before {
+      width: 13px;
+      height: 13px;
+    }
+    &__feedback-title,
+    &__call-phone {
+      font-size: 1.1em;
+    }
+    &__text,
+    &__inputs-span {
+      font-size: 0.7em;
+    }
+
+    &__comm-logo {
+      margin-right: 6px;
+      width: 14px;
+    }
+    &__send-btn {
+      padding: 7px 20px;
+      margin-top: 0px;
+      font-size: 0.7em;
+    }
+    &__feedback_active {
+      width: 450px;
+      padding: 30px 0;
+    }
+  }
+  .v-email-header {
+    & > img {
+      width: 15px;
+    }
+    & > img {
+      width: 10px;
+    }
+  }
+
+  .header {
+    &-bottom {
+      &__sub-item {
+        &-all__img {
+          width: 180px;
+        }
+        &-prod,
+        &-brands,
+        &-country {
+          padding: 15px 40px;
+        }
+        &-brands li a {
+          font-size: 1.1em;
+        }
+      }
+      &__div {
+        padding: 5px 0;
+      }
+      &__sub-list {
+        top: 69px;
+      }
+      &__modal {
+        top: 70px;
+      }
+      &__img {
+        width: 80%;
+        height: 80%;
+        left: 10px;
+        bottom: 5px;
+      }
+      &__box-img {
+        width: 36px;
+        height: 36px;
+      }
+      &__item span {
+        font-size: 0.7em;
+      }
+    }
+    &-middle {
+      &__logo-box,
+      &__providers-logo-box {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .search {
+    &__select-btn::before {
+      border: 4px solid transparent;
+      border-top: 4px solid #000000;
+      top: 10px;
+    }
+    &__button {
+      height: 25px;
+    }
+  }
+  .offers {
+    &-nav {
+      &__title {
+        font-size: 1em;
+      }
+      &__link {
+        font-size: 0.6em;
+      }
+    }
+    &-sale {
+      &__title {
+        font-size: 1.1em;
+      }
+      &__link,
+      & span {
+        font-size: 1.2em;
+      }
+    }
+  }
+  .news {
+    &__title {
+      font-size: 1.4em;
+    }
+    &__item-title {
+      font-size: 1.2em;
+    }
+    &__text {
+      font-size: 0.7em;
+    }
+    &__block {
+      &_left,
+      &_right {
+        height: 310px;
+      }
+      &_right .news__item .news__img {
+        max-height: 120px;
+      }
+    }
+    &__img {
+      max-width: 230px;
+    }
+  }
+
+  .recommend {
+    &__title {
+      font-size: 1.4em;
+    }
+    &__text {
+      font-size: 0.7em;
+    }
+    &__equipment {
+      &-text,
+      &-abat__text,
+      &-hicold__text {
+        font-size: 0.7em;
+      }
+      &-abat {
+        height: 51%;
+        padding-left: 50px;
+        &__img {
+          width: 110px;
+          height: 180px;
+        }
+      }
+      &-hicold {
+        height: 45%;
+        &__img {
+          width: 120px;
+          height: 120px;
+        }
+        &__title {
+          margin: 0;
+        }
+      }
+      &-left__img {
+        width: 200px;
+      }
+      &-list {
+        height: 340px;
+      }
+    }
+  }
+
+  .ceo {
+    &__offer-text,
+    &_logo-text,
+    &__logo-mark,
+    &__logo span {
+      font-size: 0.7em;
+    }
+    &__offer-title,
+    &__offer-subtitle,
+    &__logo-main-link,
+    &__logo-main-link {
+      font-size: 1.4em;
+    }
+    &__logo-box-img {
+      width: 100px;
+      height: 100px;
+      margin-top: 0;
     }
   }
 }

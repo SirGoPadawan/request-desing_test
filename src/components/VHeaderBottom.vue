@@ -1,7 +1,7 @@
 <template>
   <nav class="header-bottom">
     <div v-if="isOpen" class=" header-bottom__modal search__modal "></div>
-    <ul class="header-bottom__list">
+    <ul class="header-bottom__list container-header">
       <li>
         <span @click="isOpen = !isOpen" class="header-bottom__item">
           <div class="header-bottom__box-img">

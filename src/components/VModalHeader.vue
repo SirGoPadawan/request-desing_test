@@ -1,22 +1,83 @@
 <template>
   <div class="v-modal-header">
-    <button class="v-modal-header__btn btn-telephone" @click="openFeedback()">8 800 333-88-31</button>
+    <img src="../static/telephone.png" alt="значок почты" />
+    <button class="v-modal-header__btn" @click="openFeedback()">
+      8 800 333-88-31
+    </button>
     <div v-if="isOpenFeedback" class="v-modal-header_active"></div>
     <div v-if="isOpenFeedback" class="v-modal-header__feedback_active">
       <div>
-        <button class="v-modal-header__btn-close" @click="closeFeedback()"></button>
-        <a href="tel:+7495 790-72-05" class="v-modal-header__call-phone">8495 790-72-05</a>
+        <button
+          class="v-modal-header__btn-close"
+          @click="closeFeedback()"
+        ></button>
+        <a href="tel:+7495 790-72-05" class="v-modal-header__call-phone"
+          >8495 790-72-05</a
+        >
         <p class="v-modal-header__text">Мы принимаем звонки без выходных</p>
         <p>Выберите способ связи:</p>
         <span class="v-modal-header__inputs">
-          <input type="radio" name="feedback" class="v-modal-header__radio" id="telephone" />
-          <label for="telephone" class="v-modal-header__telephone-handler checked">Мобильный</label>
-          <input type="radio" name="feedback" class="v-modal-header__radio" id="viber" />
-          <label for="viber" class="v-modal-header__viber checked">Viber</label>
-          <input type="radio" name="feedback" class="v-modal-header__radio" id="telegram" />
-          <label for="telegram" class="v-modal-header__telegram checked">Telegram</label>
-          <input type="radio" name="feedback" class="v-modal-header__radio" id="whatsapp" />
-          <label for="whatsapp" class="v-modal-header__whatsapp checked">Whatsapp</label>
+          <span class="v-modal-header__inputs-span">
+            <img
+              src="../static/telephone-handle.png"
+              alt="иконка телефона"
+              class="v-modal-header__comm-logo"
+            />
+            <label class="v-modal-header__communication">
+              <input
+                type="radio"
+                name="feedback"
+                class="v-modal-header__radio"
+              />
+
+              <span class="communication">Мобильный</span>
+            </label>
+          </span>
+          <span class="v-modal-header__inputs-span">
+            <img
+              src="../static/viber.png"
+              alt="иконка viber"
+              class="v-modal-header__comm-logo"
+            />
+            <label class="v-modal-header__communication">
+              <input
+                type="radio"
+                name="feedback"
+                class="v-modal-header__radio"
+              />
+              <span class="communication">Viber</span>
+            </label>
+          </span>
+          <span class="v-modal-header__inputs-span">
+            <img
+              src="../static/telegram.png"
+              alt="иконка telegram"
+              class="v-modal-header__comm-logo"
+            />
+            <label class="v-modal-header__communication">
+              <input
+                type="radio"
+                name="feedback"
+                class="v-modal-header__radio"
+              />
+              <span class="communication">Telegram</span>
+            </label>
+          </span>
+          <span class="v-modal-header__inputs-span">
+            <img
+              src="../static/whatsapp.png"
+              alt="иконка whatsapp"
+              class="v-modal-header__comm-logo"
+            />
+            <label class="v-modal-header__communication">
+              <input
+                type="radio"
+                name="feedback"
+                class="v-modal-header__radio"
+              />
+              <span class="communication">Whatsapp</span>
+            </label>
+          </span>
         </span>
       </div>
       <div>

@@ -1,6 +1,6 @@
 <template>
-  <nav class="header-top">
-    <section class="header-top__nav">
+  <section class="header-top">
+    <nav class="container-header header-top__nav">
       <ul class="header-top__list">
         <li>
           <router-link to="#" class="header-top__link">Компания</router-link>
@@ -48,8 +48,8 @@
           <v-modal-header />
         </li>
       </ul>
-    </section>
-  </nav>
+    </nav>
+  </section>
 </template>
 <script>
 export default {

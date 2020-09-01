@@ -1,7 +1,16 @@
 <template>
   <div class="v-email-header">
-    <button class="v-email-header__btn btn-email" @click="openCopy()">info@stolovay.ru</button>
-    <button v-if="isOpenCopy" class="v-email-header__btn-copy_active" @click="copyMail()">Копировать</button>
+    <img src="../static/email.png" alt="значок почты" />
+    <button class="v-email-header__btn" @click="openCopy()">
+      info@stolovay.ru
+    </button>
+    <button
+      v-if="isOpenCopy"
+      class="v-email-header__btn-copy_active"
+      @click="copyMail()"
+    >
+      Копировать
+    </button>
   </div>
 </template>
 <script>

@@ -1,40 +1,92 @@
 <template>
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide>
-      <span class="swiper-slide__portf">Портфолио</span>
-      <h2 class="swiper-slide__title">
-        НИИ скорой помощи им. Н.В. Склифосовского
-      </h2>
-      <span class="swiper-slide__subtitle">Оборудование для скорой помощи</span>
-      <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
-      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
+      <div class="swiper-slide__item">
+        <span class="swiper-slide__portf">Портфолио</span>
+        <h2 class="swiper-slide__title">
+          НИИ скорой помощи им. Н.В. Склифосовского
+        </h2>
+        <span class="swiper-slide__subtitle"
+          >Оборудование для скорой помощи</span
+        >
+        <router-link to="#" class="swiper-slide__details"
+          >Подробнее</router-link
+        >
+      </div>
+
+      <div>
+        <img
+          src="../img/slide1.png"
+          alt="картинка 1"
+          class="swiper-slide__img"
+        />
+      </div>
     </swiper-slide>
     <swiper-slide>
-      <span class="swiper-slide__portf">Портфолио</span>
-      <h2 class="swiper-slide__title">
-        НИИ скорой помощи им. Н.В. Склифосовского
-      </h2>
-      <span class="swiper-slide__subtitle">Оборудование для скорой помощи</span>
-      <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
-      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
+      <div class="swiper-slide__item">
+        <span class="swiper-slide__portf">Портфолио</span>
+        <h2 class="swiper-slide__title">
+          НИИ скорой помощи им. Н.В. Склифосовского
+        </h2>
+        <span class="swiper-slide__subtitle"
+          >Оборудование для скорой помощи</span
+        >
+        <router-link to="#" class="swiper-slide__details"
+          >Подробнее</router-link
+        >
+      </div>
+
+      <div>
+        <img
+          src="../img/slide1.png"
+          alt="картинка 1"
+          class="swiper-slide__img"
+        />
+      </div>
     </swiper-slide>
     <swiper-slide>
-      <span class="swiper-slide__portf">Портфолио</span>
-      <h2 class="swiper-slide__title">
-        НИИ скорой помощи им. Н.В. Склифосовского
-      </h2>
-      <span class="swiper-slide__subtitle">Оборудование для скорой помощи</span>
-      <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
-      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
+      <div class="swiper-slide__item">
+        <span class="swiper-slide__portf">Портфолио</span>
+        <h2 class="swiper-slide__title">
+          НИИ скорой помощи им. Н.В. Склифосовского
+        </h2>
+        <span class="swiper-slide__subtitle"
+          >Оборудование для скорой помощи</span
+        >
+        <router-link to="#" class="swiper-slide__details"
+          >Подробнее</router-link
+        >
+      </div>
+
+      <div>
+        <img
+          src="../img/slide1.png"
+          alt="картинка 1"
+          class="swiper-slide__img"
+        />
+      </div>
     </swiper-slide>
     <swiper-slide>
-      <span class="swiper-slide__portf">Портфолио</span>
-      <h2 class="swiper-slide__title">
-        НИИ скорой помощи им. Н.В. Склифосовского
-      </h2>
-      <span class="swiper-slide__subtitle">Оборудование для скорой помощи</span>
-      <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
-      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
+      <div class="swiper-slide__item">
+        <span class="swiper-slide__portf">Портфолио</span>
+        <h2 class="swiper-slide__title">
+          НИИ скорой помощи им. Н.В. Склифосовского
+        </h2>
+        <span class="swiper-slide__subtitle"
+          >Оборудование для скорой помощи</span
+        >
+        <router-link to="#" class="swiper-slide__details"
+          >Подробнее</router-link
+        >
+      </div>
+
+      <div>
+        <img
+          src="../img/slide1.png"
+          alt="картинка 1"
+          class="swiper-slide__img"
+        />
+      </div>
     </swiper-slide>
 
     <div class="swiper-pagination" slot="pagination"></div>
@@ -57,10 +109,10 @@ export default {
       swiperOption: {
         spaceBetween: 30,
         centeredSlides: true,
-        autoplay: {
+        /* autoplay: {
           delay: 2500,
           disableOnInteraction: false,
-        },
+        }, */
         loop: true,
         pagination: {
           el: ".swiper-pagination",
@@ -75,43 +127,43 @@ export default {
 .swiper {
   height: 100%;
   width: 100%;
-
-  .swiper-slide {
-    color: #ffffff;
+}
+.swiper-slide {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 75px 20px 75px 55px;
+  background-color: #232323;
+  &__item {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    justify-content: flex-start;
-    box-sizing: border-box;
-    align-content: space-between;
-    flex-wrap: wrap;
-    padding: 75px;
-    background-color: rgb(35, 35, 35);
+    align-items: flex-start;
+  }
 
-    &__portf {
-      margin-bottom: 40px;
-      color: rgb(119, 119, 119);
-    }
-    &__title {
-      margin: 0;
-      font-size: 2.5em;
-      width: 410px;
-    }
-    &__subtitle {
-      margin-top: 10px;
-      margin-bottom: 60px;
-    }
-    &__details {
-      background: #faad3d;
-      color: #ffffff;
-      border-radius: 50px;
-      padding: 10px 35px;
-    }
-    &__img {
-      width: 285px;
-      height: 350px;
-      object-fit: contain;
-    }
+  &__portf {
+    margin-bottom: 40px;
+    color: rgb(119, 119, 119);
+  }
+  &__title {
+    margin: 0;
+    font-size: 2.5em;
+    width: 88%;
+  }
+  &__subtitle {
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+  &__details {
+    background: #faad3d;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 35px;
+  }
+  &__img {
+    width: 285px;
+    height: 350px;
+    object-fit: contain;
   }
 }
 .swiper-pagination-bullet {
