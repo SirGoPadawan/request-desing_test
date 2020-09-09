@@ -42,6 +42,9 @@
     <button class="search__button">
       <img src="../img/search.png" alt="" class="search__img" />
     </button>
+    <div class="search__mobile">
+      <button class="search__mobile-btn"></button>
+    </div>
   </section>
 </template>
 <script>

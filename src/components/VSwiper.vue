@@ -3,92 +3,41 @@
     <swiper-slide>
       <div class="swiper-slide__item">
         <span class="swiper-slide__portf">Портфолио</span>
-        <h2 class="swiper-slide__title">
-          НИИ скорой помощи им. Н.В. Склифосовского
-        </h2>
-        <span class="swiper-slide__subtitle"
-          >Оборудование для скорой помощи</span
-        >
-        <router-link to="#" class="swiper-slide__details"
-          >Подробнее</router-link
-        >
+        <h2 class="swiper-slide__title">НИИ скорой помощи им. Н.В. Склифосовского</h2>
+        <span class="swiper-slide__subtitle">Оборудование для пищеблоков</span>
+        <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
       </div>
-
-      <div>
-        <img
-          src="../img/slide1.png"
-          alt="картинка 1"
-          class="swiper-slide__img"
-        />
-      </div>
+      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
     </swiper-slide>
     <swiper-slide>
       <div class="swiper-slide__item">
         <span class="swiper-slide__portf">Портфолио</span>
-        <h2 class="swiper-slide__title">
-          НИИ скорой помощи им. Н.В. Склифосовского
-        </h2>
-        <span class="swiper-slide__subtitle"
-          >Оборудование для скорой помощи</span
-        >
-        <router-link to="#" class="swiper-slide__details"
-          >Подробнее</router-link
-        >
+        <h2 class="swiper-slide__title">НИИ скорой помощи им. Н.В. Склифосовского</h2>
+        <span class="swiper-slide__subtitle">Оборудование для скорой помощи</span>
+        <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
       </div>
-
-      <div>
-        <img
-          src="../img/slide1.png"
-          alt="картинка 1"
-          class="swiper-slide__img"
-        />
-      </div>
+      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
     </swiper-slide>
     <swiper-slide>
       <div class="swiper-slide__item">
         <span class="swiper-slide__portf">Портфолио</span>
-        <h2 class="swiper-slide__title">
-          НИИ скорой помощи им. Н.В. Склифосовского
-        </h2>
-        <span class="swiper-slide__subtitle"
-          >Оборудование для скорой помощи</span
-        >
-        <router-link to="#" class="swiper-slide__details"
-          >Подробнее</router-link
-        >
+        <h2 class="swiper-slide__title">НИИ скорой помощи им. Н.В. Склифосовского</h2>
+        <span class="swiper-slide__subtitle">Оборудование для скорой помощи</span>
+        <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
       </div>
-
-      <div>
-        <img
-          src="../img/slide1.png"
-          alt="картинка 1"
-          class="swiper-slide__img"
-        />
-      </div>
+      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
     </swiper-slide>
     <swiper-slide>
       <div class="swiper-slide__item">
         <span class="swiper-slide__portf">Портфолио</span>
-        <h2 class="swiper-slide__title">
-          НИИ скорой помощи им. Н.В. Склифосовского
-        </h2>
-        <span class="swiper-slide__subtitle"
-          >Оборудование для скорой помощи</span
-        >
-        <router-link to="#" class="swiper-slide__details"
-          >Подробнее</router-link
-        >
+        <h2 class="swiper-slide__title">НИИ скорой помощи им. Н.В. Склифосовского</h2>
+        <span class="swiper-slide__subtitle">Оборудование для скорой помощи</span>
+        <router-link to="#" class="swiper-slide__details">Подробнее</router-link>
       </div>
-
-      <div>
-        <img
-          src="../img/slide1.png"
-          alt="картинка 1"
-          class="swiper-slide__img"
-        />
-      </div>
+      <img src="../img/slide1.png" alt="картинка 1" class="swiper-slide__img" />
     </swiper-slide>
-
+    <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
@@ -107,6 +56,10 @@ export default {
   data() {
     return {
       swiperOption: {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         spaceBetween: 30,
         centeredSlides: true,
         /* autoplay: {
@@ -128,7 +81,14 @@ export default {
   height: 100%;
   width: 100%;
 }
+.swiper .swiper-button {
+  &-next,
+  &-prev {
+    display: none;
+  }
+}
 .swiper-slide {
+  width: 50%;
   color: #ffffff;
   display: flex;
   justify-content: space-between;

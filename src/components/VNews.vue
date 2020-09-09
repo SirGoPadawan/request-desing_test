@@ -1,5 +1,5 @@
 <template>
-  <section class="news">
+  <section class="container-main news">
     <h2 class="news__title">Новости производителей</h2>
     <div class="news__list">
       <div class="news__block news__block_left">

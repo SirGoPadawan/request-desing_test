@@ -1,5 +1,5 @@
 <template>
-  <section class="recommend">
+  <section class="container-main recommend">
     <h2 class="recommend__title">Рекомендуем</h2>
     <p class="recommend__text">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,

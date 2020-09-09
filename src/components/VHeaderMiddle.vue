@@ -2,6 +2,9 @@
   <nav class="header-middle">
     <ul class="header-middle__list container-header">
       <li>
+        <div class="header-middle__menu"></div>
+      </li>
+      <li>
         <router-link to="#" class="header-middle__link-home">
           <div class="header-middle__logo-box">
             <img
@@ -10,7 +13,10 @@
               class="header-middle__logo"
             />
           </div>
-          <span class="header-middle__link-main">Столовая.РУ</span>
+          <div class="header-middle__link">
+            <span class="header-middle__link-main">Столовая.РУ</span>
+            <span class="header-middle__link-span">Создание пищеблоков</span>
+          </div>
         </router-link>
       </li>
       <li>
@@ -32,10 +38,17 @@
         </a>
       </li>
       <li>
+        <button class="search__mobile-phone"></button>
+      </li>
+      <li>
         <router-link to="#" class="header-middle__cart-link">
           <span class="header-middle__cart">
             <span class="header-middle__amount">0</span>
-            <img src="../img/cart.png" alt="Корзина" />
+            <img
+              src="../img/cart-mobile.png"
+              alt="Корзина"
+              class="header-middle__cart-img"
+            />
           </span>
           <span class="header-middle__cart-summ"
             ><span class="header-middle__summ-text">Сумма</span

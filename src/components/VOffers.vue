@@ -1,5 +1,5 @@
 <template>
-  <section class="offers">
+  <section class="container-main offers">
     <nav class="offers-nav">
       <h2 class="offers-nav__title">Целевые предложение</h2>
       <ul class="offers-nav__list">
@@ -30,6 +30,11 @@
         <li class="offers-nav__item">
           <a href="#" class="offers-nav__link">Все предложения</a>
         </li>
+      </ul>
+    </nav>
+    <nav class="offers-nav-mobile">
+      <ul class="offers-nav-mobile__list">
+        <li class="offers-nav-mobile__item">Оборудование</li>
       </ul>
     </nav>
     <section class="offers-slider">

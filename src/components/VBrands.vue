@@ -1,5 +1,5 @@
 <template>
-  <section class="brands">
+  <section class="container-main brands">
     <ul class="brands__list">
       <li class="brands__item">
         <router-link to="#" class="brands__link">

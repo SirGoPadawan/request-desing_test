@@ -1,6 +1,6 @@
 <template>
   <nav class="header-bottom">
-    <div v-if="isOpen" class=" header-bottom__modal search__modal "></div>
+    <div v-if="isOpen" class="search__modal header-bottom__modal"></div>
     <ul class="header-bottom__list container-header">
       <li>
         <span @click="isOpen = !isOpen" class="header-bottom__item">

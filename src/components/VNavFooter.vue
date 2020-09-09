@@ -138,6 +138,9 @@
           </li>
         </ul>
       </li>
+      <li>
+        <router-link to="#" class="nav-footer__title">Реквизиты</router-link>
+      </li>
     </ul>
   </nav>
 </template>
